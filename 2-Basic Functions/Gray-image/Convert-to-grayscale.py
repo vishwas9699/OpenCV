@@ -1,6 +1,6 @@
 import cv2
 
-img= cv2.imread("2-Basic Functions\Image.jpg")
+img= cv2.imread("2-Basic Functions\Gray-image\Image.jpg")
 
 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
