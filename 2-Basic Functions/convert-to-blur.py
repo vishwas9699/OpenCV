@@ -1,6 +1,6 @@
 import cv2
 
-img= cv2.imread("2-Basic Functions\Blur-image\Image.jpg")
+img= cv2.imread("Resources\Test Image.jpg")
 
 imgBlur = cv2.GaussianBlur(img,(9,9),0)
 
