@@ -1,1 +1,2 @@
-|Function|Code|
+|SN|   Function|  Code|
+|--|------|----|
