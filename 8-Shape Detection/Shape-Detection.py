@@ -72,8 +72,7 @@ imgCanny = cv2.Canny(imgGray,50,50)
 getContours(imgCanny)
  
 imgBlank = np.zeros_like(img)
-#imgStackofAll = stackImages(0.5,([img,imgGray,imgBlur],
-#                            [imgCanny,imgContour,imgBlank]))
+#imgStackofAll = stackImages(0.5,([img,imgGray,imgBlur],[imgCanny,imgContour,imgBlank]))
 #cv2.imshow("Stack", imgStackofAll)
 
 imgStack = stackImages(0.6,([img,imgGray],[imgCanny,imgContour]))
