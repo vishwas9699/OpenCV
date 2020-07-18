@@ -1,11 +1,25 @@
 import cv2
 
+def empty(a):
+    pass
+
+
 path = "Resources\lambo.png"
+cv2.namedWindow("TrackBars")
+cv2.resizeWindow("TrackBars",640,240)
+cv2.createTrackbar("Hue Minimum","TrackBars",0,179,empty)
+cv2.createTrackbar("Hue Maximum","TrackBars",179,179,empty)
+cv2.createTrackbar("Saturation Minimum","TrackBars",0,255,empty)
+cv2.createTrackbar("Saturation Maximum","TrackBars",255,255,empty)
+cv2.createTrackbar("Value Minimum","TrackBars",0,255,empty)
+cv2.createTrackbar("Value Maximum","TrackBars",255,255,empty)
 
-img = cv2.imread(path)
-ImgHSV=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+while True:
+    img = cv2.imread(path)
+    imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 
-cv2.imshow("Original Output",img)
-cv2.imshow("HSV Output",ImgHSV)
 
-cv2.waitKey(0)
+
+    cv2.imshow("Original Image",img)
+    cv2.imshow("HSV Image",imgHSV)
+    cv2.waitKey(1)
