@@ -58,7 +58,7 @@ def getContours(img):
  
             cv2.rectangle(imgContour,(x,y),(x+w,y+h),(0,255,0),2)
             cv2.putText(imgContour,objectType,
-                        (x+(w//2)-10,y+(h//2)-10),cv2.FONT_HERSHEY_COMPLEX,0.6,
+                        (x-10+(w//2)-10,y-10+(h//2)-10),cv2.FONT_HERSHEY_COMPLEX,0.7,
                         (0,0,0),2)
  
  
@@ -72,8 +72,10 @@ imgCanny = cv2.Canny(imgGray,50,50)
 getContours(imgCanny)
  
 imgBlank = np.zeros_like(img)
-imgStack = stackImages(0.5,([img,imgGray,imgBlur],
-                            [imgCanny,imgContour,imgBlank]))
- 
-cv2.imshow("Stack", imgStack)
+#imgStackofAll = stackImages(0.5,([img,imgGray,imgBlur],
+#                            [imgCanny,imgContour,imgBlank]))
+#cv2.imshow("Stack", imgStackofAll)
+
+imgStack = stackImages(0.6,([img,imgGray],[imgCanny,imgContour]))
+cv2.imshow("Result",imgStack)
 cv2.waitKey(0)
