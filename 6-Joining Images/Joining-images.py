@@ -45,4 +45,4 @@ cv2.imshow("Horizontal",imgHor)
 cv2.imshow("Vertical",imgVer)
 cv2.imshow("ImageStack",imgStack)
  
-cv2.waitKey(3000)
+cv2.waitKey(0)
